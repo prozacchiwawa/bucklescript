@@ -13,6 +13,9 @@ switch (os.type()) {
     case 'Linux':        
     case 'Windows_NT':
         sys_extension = "." + os.platform(); break;
+    case 'DragonFly':
+	is_bsd = true;
+	sys_extension = "." + "FreeBSD"; break;
     default: throw ("Not supported" + os.type())
 }
 
